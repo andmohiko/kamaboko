@@ -14,6 +14,7 @@ const Ogp: NextPage = () => {
           property="og:image"
           content="https://kamaboko.vercel.app/api/og?title=すしたべたい&emoji=🍣"
         />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <div
