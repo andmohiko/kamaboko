@@ -1,7 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
-const Ogp: NextPage = () => {
+const QueryOgp: NextPage = () => {
+  const router = useRouter()
+  const {
+    title,
+    emoji
+  } = router.query
+  console.log(title, emoji)
   return (
     <div>
       <Head>
@@ -10,7 +17,7 @@ const Ogp: NextPage = () => {
         <title>The ogp emojititle</title>
         <meta
           property="og:image"
-          content="https://kamaboko.vercel.app/api/og?title=すしたべたい&emoji=🍣"
+          content={`https://kamaboko.vercel.app/api/og?title=${title}&emoji=${emoji}`}
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -34,7 +41,7 @@ const Ogp: NextPage = () => {
             fontSize: 80
           }}
         >
-          🍣
+          {emoji}
         </span>
         <p
           style={{
@@ -48,11 +55,11 @@ const Ogp: NextPage = () => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          タイトル
+          {title}
         </p>
       </div>
     </div>
   )
 }
 
-export default Ogp
+export default QueryOgp
