@@ -19,7 +19,8 @@ const Ogp: NextPage = () => {
       <div
         style={{
           background: 'linear-gradient(299deg, rgba(2,0,36,1) 0%, rgba(118,42,147,1) 23%, rgba(0,212,255,1) 100%)',
-          backgroundSize: '150px 150px',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
           height: '630px',
           width: '1200px',
           display: 'flex',
