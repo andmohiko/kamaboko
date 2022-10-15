@@ -15,7 +15,7 @@ export default function handler(req: NextRequest) {
     const hasTitle = searchParams.has('title');
     const hasEmoji = searchParams.has('emoji');
     const title = hasTitle
-      ? searchParams.get('title')?.slice(0, 100)
+      ? searchParams.get('title')?.slice(0, 120)
       : 'My default title';
     const emoji = hasEmoji
       ? searchParams.get('emoji')
